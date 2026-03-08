@@ -164,7 +164,7 @@ update_iters = 18
 max_iters = 1000
 fin_tol = 1e-7
 
-options={'disp': True, 'maxcor': 10, 'ftol': fin_tol*10, 'gtol': 1e-12, 'maxls': 5, 'maxiter': update_iters}
+options={'maxcor': 10, 'ftol': fin_tol*10, 'gtol': 1e-12, 'maxls': 5, 'maxiter': update_iters}
 
 # respect constraints with grey settings
 while not driver.feasibleDesign() and max_iters > 0:

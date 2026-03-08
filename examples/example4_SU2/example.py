@@ -158,7 +158,7 @@ import scipy.optimize
 driver.preprocess()
 x = driver.getInitial()
 
-options = {'disp': True, 'ftol': 1e-7, 'maxiter': 100}
+options = {'ftol': 1e-7, 'maxiter': 100}
 
 optimum = scipy.optimize.minimize(driver.fun, x, method="SLSQP", jac=driver.grad,\
           constraints=driver.getConstraints(), bounds=driver.getBounds(), options=options)

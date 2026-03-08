@@ -70,7 +70,7 @@ lb = driver.getLowerBound()
 ub = driver.getUpperBound()
 bounds = np.array((lb,ub),float).transpose()
 max_iters = 200
-options={'disp': True, 'maxcor': 10, 'ftol': 1e-7, 'gtol': 1e-12, 'maxiter': update_iters}
+options={'maxcor': 10, 'ftol': 1e-7, 'gtol': 1e-12, 'maxiter': update_iters}
 
 while not beta.isAtTop():
   optimum = scipy.optimize.minimize(driver.fun, x, method="L-BFGS-B",\

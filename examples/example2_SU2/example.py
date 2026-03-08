@@ -65,7 +65,7 @@ ub = driver.getUpperBound()
 transform = BoundConstraints(driver.fun,driver.grad,lb,ub)
 
 max_iters = 200
-options={'disp': True, 'maxcor': 10, 'ftol': 1e-7, 'gtol': 1e-12, 'maxiter': update_iters, 'maxls': 20}
+options={'maxcor': 10, 'ftol': 1e-7, 'gtol': 1e-12, 'maxiter': update_iters, 'maxls': 20}
 
 while not beta.isAtTop():
   x0 = transform.inverse(x)
